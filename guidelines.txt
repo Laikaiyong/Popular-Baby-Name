@@ -1,0 +1,11 @@
+A functional Connection is one that:
+
+Connects to a data source or API (other than SQLAlchemy, Snowpark, Google Sheets, and fsspec-compatible data sources like AWS S3, GCP, …).
+Follow our connection-building best practices 61 and include:
+A _connect() method to set up and return the underlying connection object
+A way to retrieve the underlying connection object (such as a cursor() method)
+Convenience methods — at a minimum, a query() method wrapped in @st.cache_data
+A functional demo app is one that:
+Showcases the functionality of your Connection (i.e. retrieves data or information from your data source or API of choice)
+Is hosted publicly on Community Cloud 22
+Doesn’t hit an error when we try it out
